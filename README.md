@@ -1,4 +1,4 @@
-##Iten's Curriculum
+#Iten Curriculum
 
 **Table of Contents**  
 -Chapter One: How Computers Operate 
