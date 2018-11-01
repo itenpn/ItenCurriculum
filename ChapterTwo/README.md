@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Iten's Curriculum
 
 ## Chapter Two: Object Oriented Programming
@@ -147,3 +148,6 @@ In all object oriented languages, the programmer can create objects that hold da
 way we can create objects is through classes. Classes define what data the object holds, and the
 methods that can be used to manipulate that data. We break classes up into two different parts:
 private and public data.   
+=======
+
+>>>>>>> e674611b4524e283dfde846e940f19dd43d69384

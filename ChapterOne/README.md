@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Iten's Curriculum
 
 ## Chapter One: How Computers Work
@@ -121,3 +122,6 @@ it matters far more in systems-level programming with lower level languages such
 C, C++, Rust, or Go.  
 
 # End of Chapter One 
+=======
+
+>>>>>>> e674611b4524e283dfde846e940f19dd43d69384
