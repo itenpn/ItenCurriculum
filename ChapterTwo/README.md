@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Iten's Curriculum
 
 ## Chapter Two: Object Oriented Programming
@@ -146,8 +145,9 @@ in programming. So get to know them well.
 ### Creating Classes
 In all object oriented languages, the programmer can create objects that hold data together. The
 way we can create objects is through classes. Classes define what data the object holds, and the
-methods that can be used to manipulate that data. We break classes up into two different parts:
-private and public data.   
-=======
-
->>>>>>> e674611b4524e283dfde846e940f19dd43d69384
+methods that can be used to manipulate that data. We break classes up into two different parts: private
+and public data. Private data holds variables that we cannot access outside of the class. This
+makes sure that we cannot modify them without protections. Public data holds methods that we can
+use to manipulate this data. Methods are the same thing as functions, except they are inside classes.
+Typically we have methods to both get and set the private variables, and a toString function to
+represent the class when it is printed to a command line.
