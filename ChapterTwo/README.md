@@ -140,7 +140,30 @@ do{
 As long as the value x is true, the code will run. Do loops will run regardless if x is true
 at the beginning or not. But we can stop any of these loops at any time using the break keyword.
 Or we can make the loop skip a step by using the continue keyword. Using these loops are essential
-in programming. So get to know them well.  
+in programming. So get to know them well.
+
+### Functions
+While we are creating our programs, we often find that our main grows huge! Doing the same logic
+repeatedly can become quickly too much of a hassle to complete. It's impossible after a while to
+continue making programs if we can't section them into pieces. This is where functions come in.
+Functions act as a way to separate our code. There are two types of functions, those that return
+values, and those that don't. Functions have a new useful data type attributed to them: `void`.
+Voids are functions that do not have a returned datatype.  
+
+Functions tend to follow a similar trend. They contain a return type, name, and parameters. Let's
+discuss each of these. Return types can be any type of data. These can be primitive data types,
+collection types, voids, or even classes. The name of the function is important, we should name it
+so that other programmers can easily understand what it does. Parameters are data that is passed
+into the function. When you find yourself passing in large portions of data, you should probably
+bind that data together. We can pass data by value or by reference. Simply value means that we can
+either give the function the ability to mutate the data, or reference means to give the function
+an immutable pointer to the data. This is the typical form:  
+```
+void FuctionName(datatype1 a, datatype2 b){
+  	//code
+	return(value);
+}
+```
 
 ### Creating Classes
 In all object oriented languages, the programmer can create objects that hold data together. The
@@ -150,4 +173,158 @@ and public data. Private data holds variables that we cannot access outside of t
 makes sure that we cannot modify them without protections. Public data holds methods that we can
 use to manipulate this data. Methods are the same thing as functions, except they are inside classes.
 Typically we have methods to both get and set the private variables, and a toString function to
-represent the class when it is printed to a command line.
+represent the class when it is printed to a command line.  
+
+When we create an instance of a class, we call it an object. To create objects, we must have a public
+constructor to create an instance of our class. There can be infinite constructors that take in different
+parameters in order to fill up the private data. All objects are stored in the heap. This means we can 
+create an infinite number of objects, all being able to bind the same data together, but each instance 
+has separate variables. This is the core to creating classes. The idea that we can take our data and 
+create objects. Thinking with objects is essential to understanding this paradigm.  
+
+Another important aspect of classes are utilizing other classes. By creating general classes that can
+be reused, and then specializing its functionality into separate smaller classes, we can create more
+efficient code. This concept is called extension. In essence, programming languages allow us to take
+another class and extend its properties. This is considered a parent and child relationship. Parent
+classes cannot utilize the methods or data of child classes, but child classes can utilize the parent's
+methods and data with the super function. Another type of extension is an interface. These are classes 
+that do not have constructors. Therefore they are more akin to a collection of functions than a class. 
+These are used moreso for event listeners that take in user input simultaneously with the program.  
+
+OOP languages usually have this structure when defining classes:
+```
+class ClassName extends Parent implements Interface{
+
+    private dataType data;
+    
+    public ClassName(){
+        data = 0;
+        //default constructor
+    }
+    
+    public ClassName(dataType dataInput){
+        data = dataInput;
+        //fill constructor
+    }
+    
+    public void setData(dataType dataInput){
+        data = dataInput;
+        //setter
+    }
+    
+    public dataType getData(){
+        return data;
+        /getter
+    }
+    
+    public String toString(){
+        return data.toString();
+        //toString
+    }
+
+}
+```
+
+### Languages are the Same!
+Once we understand the basics, we can realize that nearly every language based off of OOP is the same!
+Each language takes these basic concepts and implements them. Let's compare the following Java and C++
+code and spot the differences.  
+
+Example 1: Java
+```java
+public class Student{
+
+    private String name;
+    private int id;
+
+    public Student(){
+        name = "";
+        id = 0;
+    }
+    
+    public Student(String n, int i){
+        name = n;
+        id = i;
+    }
+    
+    public void setName(String n){
+        name = n;
+    }
+    
+    public void setID(int i){
+        id = i;
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+    public int getID(){
+        return id;
+    }
+    
+    public String toString(){
+        return (name + ", " + Integer.toString(id));
+    }
+
+}
+```
+
+Example 2: C++
+```cpp
+#include<String>
+
+#ifndef _STUDENT_H_
+#define _STUDENT_H_
+class Student{
+    private:
+        std::String name;
+        int id;
+    public:
+        Student();
+        Student(std::String n, int i);
+        void setName(std::String n);
+        void setID(int i);
+        std::String getName();
+        int getID();
+        std::String to_string();
+};
+
+Student::Student(){
+    name = "";
+    id = 0;
+}
+
+Student::Student(std::String n, int i){
+    name = n;
+    id = i;
+}
+
+void Student::setName(std::String n){
+    name = n;
+}
+
+void Student::setID(int i){
+    id = i;
+}
+
+std::String Student::getName(){
+    return name;
+}
+
+int Student::getID(){
+    return id;
+}
+
+std::String Student::to_string(){
+    return (name + ", " + id.to_string());
+}
+#endif
+```
+
+As you can see, both pieces of code are almost identical. They share many
+similarities. While you may think that they look slightly confusing, you
+should be able to spot how data types are utilized and how the languages
+declare private and public along with how they set up classes.
+
+# End of Chapter Two
